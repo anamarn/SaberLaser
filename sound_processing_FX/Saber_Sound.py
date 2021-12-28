@@ -4,13 +4,15 @@ import numpy as np
 from scipy.io import wavfile
 from multiprocessing import Lock
 
+WAV_FILE_PATH = "sound_processing_FX/saber_sound.wav"
+
 
 class SaberSound:
     def __init__(
         self,
         device=None,
         amplitude=0.2,
-        wav_file_route="sound_processing_FX/saber_sound.wav",
+        wav_file_route=WAV_FILE_PATH,
     ):
         """
         A class used to simulate the sound of a lightsaber that change it's amplitude based on a value
