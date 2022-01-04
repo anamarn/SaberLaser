@@ -90,5 +90,17 @@ def mapping(points, a, b, c):
             pass
         # horizontal
     elif signs[0] != signs[2]:
+        if signs[2] > signs[0]:
+            # |_
+            pass
+        else:
+            # -|
+            pass
+    elif signs[1] != signs[3]:
+        if signs[1] > signs[3]:
 
-        return None
+            # |-
+            pass
+        else:
+            # _|
+            pass
