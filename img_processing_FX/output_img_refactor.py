@@ -162,8 +162,17 @@ def draw_lines(img, lines):
     a1, b1, c1 = lines[0]
     a2, b2, c2 = lines[1]
     arr_p0 = np.array([(0, 0), (w, 0), (0, h), (w, h)])
+    f = lambda x, y: x[0] * y[0] + x[1] * y[1] + x[2]
     arr_p1 = np.array([a1 * arr[0] + b1 * arr[1] + c1 for arr in arr_p0])
     arr_p2 = np.array([a2 * arr[0] + b2 * arr[1] + c2 for arr in arr_p0])
+    arr_l1 = np.array(
+        [
+            arr_p1[0] * arr_p1[1],
+            arr_p1[0] * arr_p1[2],
+            arr_p1[1] * arr_p1[3],
+            arr_p1[2] * arr_p1[3],
+        ]
+    )
 
 
 def img_procesings(img):
